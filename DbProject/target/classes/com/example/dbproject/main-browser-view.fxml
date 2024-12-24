@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.dbproject.MainController"
+            prefHeight="600.0"
+            prefWidth="800.0"
+            style="-fx-background-color: #f0f4f8;">
+
+    <left>
+        <VBox spacing="10" prefWidth="200" style="-fx-background-color: #e6f2ff; -fx-padding: 10;">
+            <Label text="Databases:" style="-fx-font-weight: bold; -fx-font-size: 16px; -fx-text-fill: #333;" />
+            <ListView fx:id="databaseListView" onMouseClicked="#onDatabaseSelected" VBox.vgrow="ALWAYS" style="-fx-background-color: #ffffff; -fx-border-color: #a3bcd3; -fx-border-radius: 5;" />
+        </VBox>
+    </left>
+
+    <center>
+        <VBox spacing="10" style="-fx-padding: 10;">
+            <Label text="Tables:" style="-fx-font-weight: bold; -fx-font-size: 16px; -fx-text-fill: #333;" />
+            <ListView fx:id="tableListView" onMouseClicked="#onTableSelected" VBox.vgrow="ALWAYS" style="-fx-background-color: #ffffff; -fx-border-color: #a3bcd3; -fx-border-radius: 5;" />
+
+            <TableView fx:id="dataTableView" VBox.vgrow="ALWAYS" style="-fx-background-color: #ffffff; -fx-border-color: #a3bcd3; -fx-border-radius: 5;">
+
+            </TableView>
+
+
+            <HBox spacing="10" alignment="BOTTOM_RIGHT" style="-fx-padding: 10;">
+                <Button text="Insert" onAction="#onInsertAction" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 5; -fx-padding: 5 10;" />
+                <Button text="Delete" onAction="#onDeleteAction" style="-fx-background-color: #f44336; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 5; -fx-padding: 5 10;" />
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>
